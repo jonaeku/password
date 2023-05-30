@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Password Encryption App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Die Password Encryption App ist eine webbasierte Anwendung, mit der Benutzer Passwörter verschlüsseln, speichern und wiederherstellen können. Die App verwendet die AES-Verschlüsselungstechnik, um die Passwörter zu schützen.
 
-## Available Scripts
+## Funktionen
 
-In the project directory, you can run:
+- Eingabe eines Passworts
+- Verschlüsselung des Passworts
+- Speichern des verschlüsselten Passworts in einer Datenbank
+- Generierung eines eindeutigen Links zum Anzeigen des Passworts
+- Countdown-Timer, der das Passwort nach Ablauf der Zeit aus der Datenbank löscht
 
-### `npm start`
+## Technologien
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Die App basiert auf dem React-Framework und verwendet die Bibliothek "crypto-js" für die AES-Verschlüsselung. Die Datenbankanbindung erfolgt über HTTP-Anfragen mit Axios.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Stellen Sie sicher, dass Node.js auf Ihrem System installiert ist.
+2. Klone das GitHub-Repository der App: `git clone https://github.com/jonaeku/password.git`
+3. Navigiere in das Projektverzeichnis: `cd password`
+4. Installiere die Abhängigkeiten: `npm install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Server starten
 
-### `npm run build`
+1. Stelle sicher, dass du im Hauptverzeichnis der App bist.
+2. Starte den Server: `npx json-server --watch db.json --port 3001`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Verwendung
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Starte die App: `npm start` (im Hauptverzeichnis der App)
+2. Öffne deinen Webbrowser und gehe zur Adresse `http://localhost:3000`
+3. Du wirst zur Startseite der App weitergeleitet, wo du ein Passwort eingeben kannst.
+4. Klicke auf "Encrypt and save password", um das Passwort zu verschlüsseln und in der Datenbank zu speichern.
+5. Du erhältst einen eindeutigen Link, den du kopieren und an andere Benutzer weitergeben kannst.
+6. Der Empfänger kann den Link aufrufen und das Passwort anzeigen.
+7. Das Passwort wird für eine festgelegte Zeit angezeigt, die durch den Countdown-Timer angezeigt wird.
+8. Nach Ablauf der Zeit wird das Passwort automatisch aus der Datenbank gelöscht.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Hinweis
 
-### `npm run eject`
+- Bitte beachte, dass das Passwort nach Ablauf der Zeit nicht wiederhergestellt werden kann.
+- Sorge dafür, dass du den Link oder das Passwort an einem sicheren Ort speicherst.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
